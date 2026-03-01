@@ -10,7 +10,7 @@ Google Certified **Professional Cloud Architect** & **Associate Cloud Engineer**
 
 ## 🚀 What I Build
 
-### Newton — Enterprise AI Agent Platform
+### Enterprise AI Agent Platform
 An extensible platform where any organization deploys AI agents that automate their workflows. Like ChatGPT, but with tools, RBAC, and automatic agent deployment.
 
 - **Middleware Service** (Quart) — Async API gateway with 18 endpoint groups, multi-provider JWT auth (Azure AD, Zitadel, custom ERP), chat streaming via SSE, and automatic agent lifecycle management on Letta
