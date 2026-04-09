@@ -1,8 +1,11 @@
 # 👋 Hi, I'm Rushikesh Bawaskar
 
-**Python Software Engineer** building production microservices and Agentic AI systems.
+🚀 **Software Engineer | Agentic AI Systems | Backend & Infra**
 
-Google Certified **Professional Cloud Architect** & **Associate Cloud Engineer** with 2+ years of experience in async Python backends (FastAPI, Quart, SQLAlchemy), RAG pipelines, and stateful agent frameworks (Letta). Currently building enterprise AI platforms where organizations deploy customizable AI agents with dynamic tool discovery and role-based access control.
+Building **production-grade Agentic AI systems (RAG, MCP, Tool Calling)** with async Python at scale.
+
+Google Certified **Professional Cloud Architect** & **Associate Cloud Engineer** with 2+ years of experience designing distributed systems, AI platforms, and real-time data pipelines.
+
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/rushibawaskar) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:theofficialrushi@gmail.com) [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?logo=leetcode&logoColor=white)](https://leetcode.com/Rushi_Bawaskar)
 
@@ -10,26 +13,81 @@ Google Certified **Professional Cloud Architect** & **Associate Cloud Engineer**
 
 ## 🚀 What I Build
 
-### Enterprise AI Agent Platform
-An extensible platform where any organization deploys AI agents that automate their workflows. Like ChatGPT, but with tools, RBAC, and automatic agent deployment.
+### 🧠 Enterprise AI Agent Platform
 
-- **Middleware Service** (Quart) — Async API gateway with 18 endpoint groups, multi-provider JWT auth (Azure AD, Zitadel, custom ERP), chat streaming via SSE, and automatic agent lifecycle management on Letta
-- **Document Service** (FastAPI + Celery) — Document ingestion pipeline supporting 9 formats with Docling, Vision LLM for chart/image description, and hybrid search (30% full-text + 70% pgvector cosine similarity over 1024-dim embeddings)
-- **Dynamic Tool Discovery** — Admins connect any tool server or MCP server at runtime; AI agents automatically discover and use new capabilities without redeployment
-- **Full Observability** — OpenTelemetry → Loki (logs) + Tempo (traces) + Prometheus (metrics)
+An extensible platform where organizations deploy **stateful AI agents** with dynamic tool access, RBAC, and long-running memory.
 
-`Python` `Quart` `FastAPI` `Letta` `MCP` `PostgreSQL + pgvector` `Redis` `Celery` `Docker` `GCP` `OpenTelemetry`
+#### 🔹 Key Highlights
+- Built on **Letta (stateful agents)** with dynamic personas & toolsets
+- Designed **runtime tool discovery system (MCP-compatible)** — no redeployments required
+- Implemented **secure IAM layer (OAuth2 + PKCE + RBAC)** using Zitadel & Azure AD
+- Developed **Redis-based streaming architecture** ensuring **zero message loss**
+- Built **RAG pipeline (Docling + pgvector)** with hybrid search (30% keyword / 70% vector)
+- Integrated **Vision LLMs** for chart/image understanding
+- Full observability using **OpenTelemetry → Loki + Tempo + Prometheus**
 
-### AI Sports Analytics System
-Generative AI sports analytics platform where non-technical users ask questions in plain English and get charts from BigQuery data.
+#### 📊 Key Achievements
+- ⚡ **50% faster document ingestion**
+- 🔍 Hybrid search improved retrieval relevance significantly
+- 🛡️ Zero message loss even during client disconnects
+- 🔄 Eliminated redeployments via dynamic tool registration
 
-- **Text-to-SQL agents** using Google Agent ADK + Gemini
-- **90% latency reduction** (30s → 3s) via Server-Sent Events streaming
-- Distributed tracing with OpenTelemetry
+#### 🧠 Architecture Overview
 
-`Google Agent ADK` `Gemini` `FastAPI` `BigQuery` `SSE` `OpenTelemetry`
+  User → Middleware (FastAPI)
+→ Agent (Letta)
+→ Tool Server (FastAPI)
+→ MCP Servers / External APIs
+→ Redis Stream (async response handling)
+→ UI (SSE streaming)
+ 
+#### ⚙️ Tech Stack
+`Python` `Quart` `FastAPI` `Letta` `MCP` `PostgreSQL (pgvector)`  
+`Redis` `Celery` `Docker` `GCP` `OpenTelemetry`
+
+### 📊 AI Sports Analytics System
+
+A Generative AI platform where users ask questions in natural language and get **real-time analytics & charts from BigQuery**.
+
+#### 🔹 Key Highlights
+- Built **Text-to-SQL agents** using Google Agent ADK + Gemini
+- Designed **MCP-based tool calling system** for real-time BigQuery access
+- Implemented **self-correcting SQL generation loop** (validation + retry)
+- Developed **secure Python execution sandbox (Docker-based)**
+- Generated **interactive Plotly charts via SSE streaming**
+- Built **multimodal RAG pipeline** (text + charts + screenshots)
+
+#### 📊 Key Achievements
+- ⚡ Reduced response latency from **30s → 3s (90% improvement)**
+- 🎯 Achieved **95%+ SQL query accuracy**
+- 🔐 Enforced **dataset-level RBAC** (Coaches vs Data Scientists)
+
+#### 🧠 Architecture Overview
+
+
+User Query → Agent (ADK + Gemini)
+→ Text-to-SQL Engine
+→ Query Validator + Retry Loop
+→ BigQuery
+→ Python Sandbox (Chart Generation)
+→ SSE → UI (Real-time charts)
+
+
+#### ⚙️ Tech Stack
+`Google Agent ADK` `Gemini` `FastAPI` `BigQuery`  
+`Docker Sandbox` `Plotly` `SSE` `OpenTelemetry`
 
 ---
+
+
+## 🧠 Core Expertise
+
+- **Agentic AI Systems** (Letta, Agent ADK, MCP)
+- **RAG Pipelines** (Hybrid Search, Multimodal Retrieval)
+- **Async Python Backends** (FastAPI, Quart, SQLAlchemy)
+- **Distributed Systems** (Streaming, Queues, SSE)
+- **System Design** (Tool Discovery, RBAC, Observability)
+- **Cloud & Infra** (GCP, Docker, CI/CD)
 
 ## 🛠️ Tech Stack
 
@@ -41,7 +99,6 @@ Generative AI sports analytics platform where non-technical users ask questions 
 **Frameworks**
 
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Quart](https://img.shields.io/badge/Quart-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
 ![Celery](https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white)
